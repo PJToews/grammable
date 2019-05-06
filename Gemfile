@@ -76,3 +76,4 @@ end
 
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'devise'
