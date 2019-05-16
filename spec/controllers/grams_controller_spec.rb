@@ -67,7 +67,7 @@ end
     end
 
     it "should have http 404 error if the gram cannot be found" do
-    uer = FactoryBot.create(:user)
+    user = FactoryBot.create(:user)
     sign_in user
     patch :update, params: { id: "YOLOSWAG", gram: { message: 'Changed' } }
     expect(response).to have_http_status(:not_found)

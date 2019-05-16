@@ -25,7 +25,8 @@ RSpec.describe CommentsController, type: :controller do
       user = FactoryBot.create(:user)
       sign_in user
       post :create, params: { gram_id: 'YOLOSWAG', comment: { message: 'awesome gram' } }
-      expect(response).to redirect_to new_user_session_path
+      # expect(response).to redirect_to new_user_session_path
+      expect(response).to have_http_status(:not_found)
     end
 end
 end
